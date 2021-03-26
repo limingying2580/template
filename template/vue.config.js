@@ -11,7 +11,7 @@ module.exports = {
     chainWebpack: config => {
         config.plugin('html')
             .tap(args => {
-                args[0].title = '安迪曼大学'
+                args[0].title = 'vue2模板'
                 return args
             })
     },
@@ -62,6 +62,7 @@ module.exports = {
         proxy: {
             '/api2': {
                 target: 'https://odm-server.odmlearning.com/api2',
+                // target: '',
                 changeOrigin: true,
                 pathRewrite: { '^/api2' : '', },
             },
